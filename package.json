@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@applitools/eyes-playwright": "^1.28.1",
+    "@playwright/test": "^1.44.1",
+    "istanbul-lib-coverage": "^3.2.2",
+    "jest-playwright-preset": "^4.0.0",
+    "nyc": "^17.0.0",
+    "playwright": "^1.44.1"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  }
+}
