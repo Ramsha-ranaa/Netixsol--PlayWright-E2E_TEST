@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Experience and Skills', () => {
-  test('Verify experience and skills are saved correctly', async ({ page }) => {
+test.describe('Experience', () => {
+  test('Verify experience  are saved correctly', async ({ page }) => {
     // Navigate to the website and login
     await page.goto('https://www.skillmatch.tech/signin');
     await page.fill('input[name="email"]', 'f200143@cfd.nu.edu.pk');
