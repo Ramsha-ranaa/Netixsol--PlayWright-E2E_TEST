@@ -5,7 +5,7 @@ test.describe('Change Password', () => {
     // Navigate to the website and login
     await page.goto('https://www.skillmatch.tech/signin');
     await page.fill('input[name="email"]', 'f200143@cfd.nu.edu.pk');
-    await page.fill('input[name="password"]', 'Ramsha@12');
+    await page.fill('input[name="password"]', 'Tester@12');
     await page.click('button[type="submit"]');
     await page.waitForNavigation();
 
@@ -19,7 +19,7 @@ test.describe('Change Password', () => {
     await page.click('button[id="simple-tab-1"]');
 
     // Fill in the old password and new password fields
-    await page.fill('input[id="oldPassword"]', 'Ramsha@12');
+    await page.fill('input[id="oldPassword"]', 'Tester@12');
     await page.fill('input[id="newPassword"]', 'Tester@12');
 
     // Click the "Change Password" button

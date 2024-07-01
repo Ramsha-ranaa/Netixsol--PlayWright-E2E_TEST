@@ -5,7 +5,7 @@ test.describe('About Me', () => {
     // Navigate to the website and login
     await page.goto('https://www.skillmatch.tech/signin');
     await page.fill('input[name="email"]', 'f200143@cfd.nu.edu.pk');
-    await page.fill('input[name="password"]', 'Mrws@4090');
+    await page.fill('input[name="password"]', 'Tester@12');
     await page.click('button[type="submit"]');
     await page.waitForNavigation();
 
