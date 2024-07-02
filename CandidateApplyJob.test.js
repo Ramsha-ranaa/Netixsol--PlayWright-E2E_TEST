@@ -22,11 +22,9 @@ test.describe('Candidate Apply for Job', () => {
     const fileInput = await page.$('input#\\:r9\\:[type="file"]');
     await fileInput.setInputFiles('C:/Users/DELL/Downloads/Ramsha_Resume.pdf');
 
-    // Wait for file upload to complete (optional, depending on your application)
-    // Add a short delay to ensure the file is uploaded before clicking submit
-    await page.waitForTimeout(1000); // Adjust as necessary
-
-    // Click Submit Application button by its text content
+   
+    await page.waitForTimeout(1000); 
+    
     await page.click('button:has-text("Submit Application")');
 
 
