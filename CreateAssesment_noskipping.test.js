@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Test Create Job Post selection  assesment', () => {
-  test('Verify Job post can not be created without selecting assesement test', async ({ page }) => {
+test.describe('Test Create Job Post', () => {
+  test('Verify Job post can be created', async ({ page }) => {
     // Navigate to the website and login
     await page.goto('https://staging.skillmatch.tech/signin');
     await page.fill('input[name="email"]', 'ehtashamalitoor50@gmail.com');
@@ -68,14 +68,37 @@ await page.fill('input#city.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBa
 await page.click('li:has-text("Faisalabad")');
 
 
-//await page.click('//button[contains(@class, "h-8") and contains(@class, "w-8") and contains(@class, "transform") and contains(@class, "cursor-pointer") and contains(@class, "rounded-[7px]")]');
 
+  // Click the input field and type "SQA Engineer"
+  await page.click('input[placeholder="Search Assessment"]');
+  await page.fill('input[placeholder="Search Assessment"]', 'SQA tesstt');
 
-await page.click('button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.w-max.px-7.py-4.font-inter.text-sm.font-bold.md\\:text-lg.css-12xf99b');
-expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/create');
+  // Click the "Create" button
+  await page.click('button:has-text("Create")');
 
+  // Wait for the new input field and type "SQA Engineer test"
+  await page.fill('input[name="name"]', 'SQA  testt');
 
+  // Click the button with the SVG icon
+  await page.click('button:has-text("Next")');
+  await page.click('button:has-text("SETTING")');
+
+await page.click('svg.MuiSvgIcon-root');
+await page.waitForSelector('input.PrivateSwitchBase-input', { timeout: 5000 });
+
+// Click on the checkbox using Playwright
+await page.click('input.PrivateSwitchBase-input');
+
+await page.click('button:has-text("Finish")');
+
+  
+  // Click the final "Create" button
+  await page.click('button:has-text("Create")');
+
+  expect(dialog.message()).toBe('Assessment Created');
+  await dialog.accept();
+
+  
 });
 
 });
-
