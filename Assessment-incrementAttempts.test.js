@@ -17,10 +17,13 @@ test.describe('Assessments', () => {
 
     await page.goto('https://staging.skillmatch.tech/candidate/assessment/6686493d5da6c3d89bc615db?job=668649c85da6c3d89bc615ee');
     await page.click('button:has-text("Next")');
+
     await page.click('button.card-shadow >> text=1');
+
     await page.click('button:has-text("Ready Set Go !")');
 
     await page.click('button:has-text("Start Test")');
+    
     await page.click('button:has-text("Next")');
 
   });

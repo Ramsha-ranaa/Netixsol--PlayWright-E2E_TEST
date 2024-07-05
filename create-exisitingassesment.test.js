@@ -22,11 +22,15 @@ test.describe('Test Create Job Post', () => {
 
     await page.fill('input#title.MuiInputBase-input.MuiOutlinedInput-input.css-1pog434', 'sqa engineer');
     await page.click('span:has-text("Full-Time")');
+
     await page.fill('input#minSalaryRange', '150000');
+
     await page.fill('input#maxSalaryRange', '300000');
+
     await page.fill('input#applicationDeadline', '2025-01-05');
     
     await page.click('div#categories.MuiSelect-select');
+
     await page.click('li[data-value="661ebc8bfc8151980e966066"]');
  
 
@@ -65,6 +69,7 @@ await page.click('li:has-text("Faisalabad")');
 
 
   await page.click('input[placeholder="Search Assessment"]');
+  
   await page.fill('input[placeholder="Search Assessment"]', 'SQA Engineer');
 
 

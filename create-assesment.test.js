@@ -22,7 +22,9 @@ test.describe('Test Create Job Post', () => {
 
     await page.fill('input#title.MuiInputBase-input.MuiOutlinedInput-input.css-1pog434', 'sqa engineer');
     await page.click('span:has-text("Full-Time")');
+
     await page.fill('input#minSalaryRange', '150000');
+
     await page.fill('input#maxSalaryRange', '300000');
     await page.fill('input#applicationDeadline', '2025-01-05');
     
@@ -60,6 +62,7 @@ await page.click('input#country.MuiInputBase-input.MuiOutlinedInput-input.MuiInp
 await page.fill('input#country.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd.MuiAutocomplete-input.MuiAutocomplete-inputFocused.css-16sx77j', 'Pakistan');
 await page.click('li:has-text("Pakistan")');
 
+
 await page.fill('input#city.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd.MuiAutocomplete-input.MuiAutocomplete-inputFocused.css-16sx77j', 'Faisalabad');
 await page.click('li:has-text("Faisalabad")');
 
@@ -67,6 +70,7 @@ await page.click('li:has-text("Faisalabad")');
 
   
   await page.click('input[placeholder="Search Assessment"]');
+
   await page.fill('input[placeholder="Search Assessment"]', 'SQA Engineer');
 
 
@@ -77,13 +81,16 @@ await page.click('li:has-text("Faisalabad")');
 
 
   await page.click('button:has-text("Next")');
+
   await page.click('button:has(svg:has(path[d="M8.166 15a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Zm0-14.077c3.618 0 6.563 2.958 6.563 6.577a6.57 6.57 0 0 1-6.563 6.563A6.57 6.57 0 0 1 1.604 7.5c0-3.618 2.944-6.577 6.562-6.577ZM4.885 7.969h2.812v2.812a.469.469 0 0 0 .938 0V7.97h2.812a.469.469 0 0 0 0-.938H8.635V4.22a.469.469 0 0 0-.938 0V7.03H4.885a.469.469 0 0 0 0 .938Z"]))');
+
   await page.click('button:has(svg[width="7"][height="12"][style*="rotate(180deg)"])');
 
 
   await page.click('button:has-text("Create")');
 
   expect(dialog.message()).toBe('Assessment Created');
+  
   await dialog.accept();
 
   

@@ -15,8 +15,10 @@ test.describe('Assessments', () => {
    
     await page.goto('https://staging.skillmatch.tech/candidate/assessment/6686493d5da6c3d89bc615db?job=668649c85da6c3d89bc615ee');
     await page.click('button:has-text("Next")');
+
     const element = page.locator('p.m-0.pt-4.font-["Inter"].text-base.font-semibold.leading-loose.tracking-tight.text-neutral-800');
     const textContent = await element.textContent();
+    
     
     await expect(element).toContainText('1');
     
