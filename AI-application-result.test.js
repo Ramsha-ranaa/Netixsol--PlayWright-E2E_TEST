@@ -2,17 +2,14 @@ import { test, expect } from '@playwright/test';
 
 test.describe('AI job Application', () => {
     test('Verify AI job Application from candidate', async ({ page }) => {
-        // Navigate to the website and login
+      
         await page.goto('https://staging.skillmatch.tech/signin');
         await page.fill('input[name="email"]', 'ehtashamalitoor50@gmail.com');
         await page.fill('input[name="password"]', 'Netixsol@fsd1');
         await page.click('button[type="submit"]');
         await page.waitForNavigation();
+
     
-        // Verify if redirected to the dashboard
-        
-    
-        // Navigate to the profile page
         await page.goto('https://staging.skillmatch.tech/dashboard/company');
     
        
@@ -21,14 +18,12 @@ test.describe('AI job Application', () => {
         const elementText = 'AI Developer';
         await page.waitForSelector(`th.MuiTableCell-root:has-text("${elementText}")`);
     
-        // Click on the <th> element
         await page.click(`th.MuiTableCell-root:has-text("${elementText}")`);        const linkText = 'See Result';
     await page.waitForSelector(`td.MuiTableCell-root:has-text("${linkText}")`);
 
-    // Click on the link
+  
     await page.click(`td.MuiTableCell-root:has-text("${linkText}") a`);
 
-    // Wait for navigation to complete
     await page.waitForNavigation();
     expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/job/applicant/assessment-details/6686af55837cd730caf54e0c/1');
 

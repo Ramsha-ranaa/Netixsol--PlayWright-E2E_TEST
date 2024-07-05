@@ -28,7 +28,5 @@ test.describe('Candidate Apply for Job', () => {
     await page.click('button:has-text("Submit Application")');
 
 
-   
-
   });
 });

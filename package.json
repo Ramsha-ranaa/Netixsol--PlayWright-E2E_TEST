@@ -8,6 +8,7 @@
     "playwright": "^1.44.1"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "npx playwright test",
+    "coverage": "nyc --reporter=html --reporter=text npx playwright test"
   }
 }
