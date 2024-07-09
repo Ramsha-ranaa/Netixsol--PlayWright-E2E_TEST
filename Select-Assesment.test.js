@@ -66,7 +66,7 @@ await page.click('li:has-text("Faisalabad")');
 
 
 await page.click('button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.w-max.px-7.py-4.font-inter.text-sm.font-bold.md\\:text-lg.css-12xf99b');
-expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/create');
+await expect(page).toHaveURL('https://staging.skillmatch.tech/company/jobs/create');
 
 
 });

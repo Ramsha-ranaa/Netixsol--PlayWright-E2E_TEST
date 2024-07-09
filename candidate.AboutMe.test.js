@@ -29,11 +29,7 @@ test.describe('About Me', () => {
     await page.click('button.MuiButton-containedPrimary[type="submit"]');
 
    
-    const dialog = await page.waitForEvent('dialog');
-
- 
-    const alertMessage = await dialog.message();
-
+   
 
     expect(alertMessage).toContain('Profile updated!!!');
 

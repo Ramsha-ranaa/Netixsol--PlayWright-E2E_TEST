@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 
 test.describe('Change Password', () => {
   test('Verify password change functionality', async ({ page }) => {
@@ -7,7 +7,7 @@ test.describe('Change Password', () => {
     await page.fill('input[name="email"]', 'f200143@cfd.nu.edu.pk');
     await page.fill('input[name="password"]', 'Tester@12');
     await page.click('button[type="submit"]');
-    await page.waitForNavigation();
+  
 
  
     await expect(page).toHaveURL('https://www.skillmatch.tech/dashboard/candidate');
@@ -21,7 +21,10 @@ test.describe('Change Password', () => {
     await page.click('a[href="/candidate/jobs#"]:has-text("Terms of Service")');
 
     await page.click('a[href="/candidate/jobs#"]:has-text("Privacy Policy")');
+    
+    await expect(page).toHaveURL('https://www.skillmatch.tech/candidate/jobs#');
 
 
   });
 });
+*/

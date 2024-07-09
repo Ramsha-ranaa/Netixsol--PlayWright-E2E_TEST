@@ -22,9 +22,8 @@ test.describe('AI job Application', () => {
         await page.click('p.my-0.whitespace-pre.duration-200:has-text("Job Listing")');
 
         const elementText = 'AI Developer';
-        
-        await page.waitForSelector(`th.MuiTableCell-root:has-text("${elementText}")`);
-    
+        (await page.waitForSelector(`th.MuiTableCell-root:has-text("${elementText}")`)).click();
+
         await page.click(`th.MuiTableCell-root:has-text("${elementText}")`);        const linkText = 'See Result';
     await page.waitForSelector(`td.MuiTableCell-root:has-text("${linkText}")`);
 
@@ -33,8 +32,7 @@ test.describe('AI job Application', () => {
     await page.click(`td.MuiTableCell-root:has-text("${linkText}") a`);
 
     await page.waitForNavigation();
-    
-    expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/job/applicant/assessment-details/6686af55837cd730caf54e0c/1');
+    await expect(page).toHaveURL('https://staging.skillmatch.tech/company/jobs/job/applicant/assessment-details/6686af55837cd730caf54e0c/1');
 
     });
 });  

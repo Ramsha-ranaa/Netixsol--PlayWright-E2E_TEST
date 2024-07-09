@@ -35,8 +35,7 @@ test.describe('AI job Application', () => {
 
     await page.waitForTimeout(1500);
     await page.click('button.MuiButton-contained');
-
-        expect(Url).toBe('https://staging.skillmatch.tech/company/candidates/661f018f488f67efc9133396');
+await expect(page).toHaveURL('https://staging.skillmatch.tech/company/candidates/661f018f488f67efc9133396');
 
 
     });

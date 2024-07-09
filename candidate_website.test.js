@@ -30,8 +30,7 @@ test.describe('website', () => {
 
         await page.locator('a[href="https://ehtasham-portfolio.vercel.app"]').click();
 
-
-        expect(Url).toBe('https://ehtasham-portfolio.vercel.app/');
+        await expect(page).toHaveURL('https://ehtasham-portfolio.vercel.app/');
 
         
     });

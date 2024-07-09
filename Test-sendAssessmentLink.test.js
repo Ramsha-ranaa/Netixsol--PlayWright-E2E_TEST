@@ -25,7 +25,7 @@ test.describe('Send Assessment Link', () => {
         const element = await page.$('div#basic-menu');
 
         await page.click('li.MuiMenuItem-root[contains(.,"Send assessment link")]');
-        xpect(dialog.message()).toBe('Assessment Send');
+        expect(dialog.message()).toBe('Assessment Send');
         await dialog.accept();
     });
 });  

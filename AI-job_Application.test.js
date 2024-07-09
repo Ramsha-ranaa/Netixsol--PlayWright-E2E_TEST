@@ -21,7 +21,7 @@ test.describe('AI job Application', () => {
         await page.waitForSelector(`th.MuiTableCell-root:has-text("${elementText}")`);
     
         await page.click(`th.MuiTableCell-root:has-text("${elementText}")`);        
-        expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/job/view/667af65e08e05ebcf204f184');
+        await expect(page).toHaveURL('https://staging.skillmatch.tech/company/jobs/job/view/667af65e08e05ebcf204f184');
 
     
 

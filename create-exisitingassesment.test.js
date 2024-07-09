@@ -76,8 +76,7 @@ await page.click('li:has-text("Faisalabad")');
   await page.click('button:has-text("Create")');
 
   await page.fill('input[name="name"]', 'SQA Engineer test');
-
-  expect(Url).toBe('https://staging.skillmatch.tech/company/jobs/create');
+await expect(page).toHaveURL('https://staging.skillmatch.tech/company/jobs/create');
 
 
 });

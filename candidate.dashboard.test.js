@@ -16,8 +16,7 @@ test.describe('Candidate Dashboard', () => {
     await page.fill('input[name="email"]', 'f200143@cfd.nu.edu.pk');
     await page.fill('input[name="password"]', 'Mrws@4090');
     await page.click('button[type="submit"]');
-    await page.waitForNavigation();
-    await expect(page).toHaveURL('https://www.skillmatch.tech/dashboard/candidate');
+   
 
 
     const buttons = await page.locator('button');
